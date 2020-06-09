@@ -1,0 +1,249 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+}
+
+body{
+    max-width:1200px;
+    margin:auto;
+    height:100%;
+
+}
+
+/*Header*/
+
+.itemMenu{
+    width:100%;
+    background-color: #ffffff;
+    overflow: auto;
+    display:flex;
+    box-shadow: 0px 5px 5px -3px gray;
+    border-radius: 9px;
+    margin-top: 15px;
+}
+.itemMenu a{
+    float:left;
+    text-align:center;
+    padding:16px;
+    padding-left: 40px;
+    font-size: 17px;
+    text-decoration: none;
+}
+
+.itemMenu a:hover{
+    background-color:grey;
+    color:white;  
+}
+
+.menu > .itemMenu > #active{
+    background-image:url(../pics/weapon.png);
+    background-repeat: no-repeat;
+    background-color: grey;
+    background-size:45px;
+    background-blend-mode: hard-light;
+    transition:ease-in 0.2s;
+    font-weight: bold;
+    color: white;
+}
+
+.menu > .itemMenu > .itemhome:hover{
+    background-color:grey !important;
+    color:white !important; 
+    background-image:url(../pics/Guide.png);
+    background-repeat: no-repeat;
+    transition:ease-in 0.2s;
+}
+
+.menu > .itemMenu > .itemitems:hover{
+    background-image:url(../pics/weapon.png);
+    background-repeat: no-repeat;
+    background-size:45px;
+    background-blend-mode: hard-light;
+    transition:ease-in 0.2s;
+    font-weight: bold;
+}
+
+
+
+/*Footer*/
+footer{
+    max-width: 1200px;
+    padding: 15px;
+    background-color:gray;
+    border-radius: 9px 9px 0 0;
+    margin-top: 15px;
+    display:flex;
+    color:white;
+    justify-content: space-between;
+}
+
+footer > div > a{
+    color:white;
+    align-items: center;
+}
+
+footer > div {
+    display: flex;
+    justify-content:initial;
+}
+
+.title{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 460px;
+}     
+
+/*Common Styles end here */
+
+
+
+
+.mainContent{
+    display:flex;
+}
+.mainContent > section{
+    display:flex;
+    flex-direction: column;
+    width: 75%;
+}
+
+.tools{
+    display:flex;
+    flex-direction:column;
+}
+.tools > .toolsGeneral {
+    width:95%;
+    margin: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+
+.mainContent > section > div {
+    width:95%;
+    margin: 15px;
+}
+
+.toolsGeneral > div {
+    margin-left:20px;
+    width: 50%;
+}
+.toolsGeneral > img {
+    width: 45%;
+    margin:auto;
+}
+.pickaxes{
+    margin:15px;
+}
+
+.pickaxes p, .pickaxes h4{
+    margin-top: 20px;
+}
+.axes{
+    margin:15px;
+}
+
+.axes p, .axes h4{
+    margin-top: 20px;
+}
+.hammers{
+    margin:15px;
+}
+
+.hammers p, .hammers h4{
+    margin-top: 20px;
+}
+
+/*Content end*/
+
+
+
+aside {
+    width: 22%;
+    margin: auto 12px;
+    margin-left: 12px;
+    float: right;
+    background-color: lightgray;
+    border-radius: 10px;
+    height: auto;
+    position:sticky;
+    padding:10px;
+    text-align: center;
+  }
+
+aside > img{
+    width:80%;
+}
+aside > img:hover{
+    scale: 125%;
+    transition: 0.3s;
+}
+
+
+
+@media only screen and (max-width: 768px){
+    aside{
+        display:none
+    }
+    
+    .mainContent{
+        width:100%;
+    }
+    .mainContent > section{
+        width:100%;
+    }
+    .itemMenu{
+        justify-content: space-between;
+        width: 45%;
+        margin:15px auto;
+    }
+    footer{
+        flex-direction: column;
+    }
+    .title{
+        width:70%;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    aside{
+        display:none
+    }
+    .mainContent{
+        width: 100%;
+        align-items: center;
+    }
+    .mainContent > section{
+        width:95%;
+        margin:auto;
+    }
+    .tools > .toolsGeneral{
+        flex-direction:column;
+        margin:auto;
+    }
+    .toolsGeneral > div {
+        width: 100%;
+        margin:auto;
+    }
+    .toolsGeneral > img{
+        width:100%;
+        margin: auto;
+        padding: 10px;
+    }
+    
+    .itemMenu{
+        justify-content: space-between;
+        width: 90%;
+        margin:auto;
+    }
+    footer{
+        flex-direction: column;
+    }
+    .title{
+        width:85%;
+    }
+}
